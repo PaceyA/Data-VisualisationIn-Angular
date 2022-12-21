@@ -13,3 +13,8 @@
 h1{
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
+
+#footer{
+  text-align: center;
+  padding: 10px;
+}
