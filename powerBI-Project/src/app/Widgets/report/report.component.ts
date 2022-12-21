@@ -19,7 +19,10 @@ export class ReportComponent {
 
   public pieData: ChartDataset[] = [
 
-    {data: this.dataToUse,label: "% Popularity"}
+    {data: this.dataToUse
+    ,label: "% Popularity"
+
+  }
   ];
 
 
@@ -28,6 +31,7 @@ export class ReportComponent {
 
   public pieoptions: ChartOptions = {
     plugins: {
+
       title:{
         display: true,
         text: `The Popularity of Programming Languages in ${this.year}`,

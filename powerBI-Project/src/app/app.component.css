@@ -4,8 +4,12 @@
 
 }
 #grid-item {
-  border-top: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
   padding: 20px;
   font-size: 18px;
   text-align: center;
+}
+
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }

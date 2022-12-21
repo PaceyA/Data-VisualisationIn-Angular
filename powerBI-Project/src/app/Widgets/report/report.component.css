@@ -1,15 +1,21 @@
 #pie{
   width: 400px;
+  border: 0.25px rgba(0, 0, 0, 0.089) solid;
+  padding: 10px;
+
 }
 
 #bar{
   width: 500px;
+  border: 0.25px rgba(0, 0, 0, 0.089) solid;
+  padding: 10px;
+
 }
 
 #container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 20px;
-}
 
+}
 
