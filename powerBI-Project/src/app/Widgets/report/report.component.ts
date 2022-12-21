@@ -11,14 +11,15 @@ export class ReportComponent {
   private year: number = 2014;
 
 
-  private data1: number[] = [20,15,13,10,9,6,3.8,3,2,1.7];
-  private data2: number[] = [4,34,3,18,5,4,3.7,5,23,1.7];
+  private data2014: number[] = [20,15,13,10,9,6,3.8,3,2,1.7];
+  private data2015: number[] = [4,34,3,18,5,4,3.7,5,23,1.7];
+  private data2016: number[] = [1,23,2,30,3,1,12,2,17,2];
 
-  private dataToUse: number[] = this.data1;
+  private dataToUse: number[] = this.data2014;
 
   public pieData: ChartDataset[] = [
 
-    {data: this.dataToUse}
+    {data: this.dataToUse,label: "% Popularity"}
   ];
 
 
@@ -32,25 +33,40 @@ export class ReportComponent {
         text: `The Popularity of Programming Languages in ${this.year}`,
         font: {
           size: 20,
+        }}}}
+
+
+        changeData(radioValue : number){
+          switch(radioValue){
+            case radioValue = 2014: {
+              this.dataToUse = this.data2014;
+              break;
+            }
+            case radioValue = 2015: {
+              this.dataToUse = this.data2015;
+              break;
+            }
+            case radioValue = 2016: {
+              this.dataToUse = this.data2016;
+              break;
+            }
+            default: {
+              break;
+            }}
+
+            this.year = radioValue;
+            this.pieData = [
+              {data: this.dataToUse,label: "% Popularity"}
+            ];
+
+            this.pieoptions = {
+            plugins: {
+              title:{
+                display: true,
+                text: `The Popularity of Programming Languages in ${this.year}`,
+                font: {
+                  size: 20,
+                }}}}
         }
-
-      }
-
-    }
-  }
-
-  changeData(){
-    if (this.dataToUse === this.data1){
-      this.dataToUse = this.data2;
-    }else{
-      this.dataToUse = this.data1;
-    }
-
-
-    this.pieData = [
-      {data: this.dataToUse}
-    ];
-
-  }
 
 }

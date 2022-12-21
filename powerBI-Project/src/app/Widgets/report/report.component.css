@@ -1,3 +1,15 @@
-div{
+#pie{
+  width: 400px;
+}
+
+#bar{
   width: 500px;
 }
+
+#container{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+
